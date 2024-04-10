@@ -1,11 +1,30 @@
 import React from "react";
-import PropertyImageCarousel from "./PropertyImageCarousel";
+import { Carousel } from "flowbite-react";
+// import PropertyImageCarousel from "./PropertyImageCarousel";
 
 const SinglePropertyPage = () => {
   return (
-    <div className="flex ">
-      <div> <PropertyImageCarousel /> </div>
-      <div>Conten</div>
+    <div className="flex items-center space-x-4">
+      {/* <div> <PropertyImageCarousel /> </div> */}
+      <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+        <img className="h-40 rounded-md" src="https://assets.codi.com/production/tr:w-600,h-400/2eha7qmyw63xtr6wz2pjpujdkp4r" alt="" />
+      {/* <Carousel >
+        <img src="/s1.webp" alt="..." />
+        <img src="https://assets.codi.com/production/tr:w-600,h-400/2eha7qmyw63xtr6wz2pjpujdkp4r" alt="..." />
+        <img src="https://flowbite.com/docs/images/carousel/carousel-3.svg" alt="..." />
+        <img src="https://flowbite.com/docs/images/carousel/carousel-4.svg" alt="..." />
+        <img src="https://flowbite.com/docs/images/carousel/carousel-5.svg" alt="..." />
+      </Carousel> */}
+    </div>
+    <div className="flex flex-col content-between items-start">
+      <div>
+      <p className="text-gray-500 text-sm">Williamsberg, Brooklyn, NY</p>
+      <h3 className="text-gray-700">Modern, Sunny Office in Williamsburg</h3>
+      </div>
+      <div>
+        <p>2,107 ft</p>
+      </div>
+    </div>
     </div>
   );
 };
