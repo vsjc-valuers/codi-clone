@@ -171,7 +171,7 @@ export default function Example() {
         </div>
       </nav>
       <div className="flex space-x-2 mx-auto justify-between max-w-7xl items-center lg:px-8">
-        <div className="flex items-center space-x-2">
+        <div className="lg:flex hidden items-center space-x-2">
           <div>
             <button className="flex items-center space-x-2 border rounded-md py-2 px-4 hover:bg-gray-200  text-blue-600 font-semibold">
               <FaCalendarDays /> <span>Full time</span>

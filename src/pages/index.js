@@ -15,8 +15,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
+      <main className='md:mx-auto md:max-w-7xl p-6 lg:px-8'>
+        <div>
         <SinglePropertyPage />
+        </div>
+        
       </main>
     </>
   );

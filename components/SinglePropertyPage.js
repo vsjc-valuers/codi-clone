@@ -4,25 +4,28 @@ import { Carousel } from "flowbite-react";
 
 const SinglePropertyPage = () => {
   return (
-    <div className="flex items-center space-x-4">
-      {/* <div> <PropertyImageCarousel /> </div> */}
-      <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
-        <img className="h-40 rounded-md" src="https://assets.codi.com/production/tr:w-600,h-400/2eha7qmyw63xtr6wz2pjpujdkp4r" alt="" />
+    <div className="flex space-x-4 w-full md:max-w-2xl">
+      <div>
+      <div className="h-40">
+        <img className="h-40 md:w-64 rounded-md" src="https://assets.codi.com/production/tr:w-600,h-400/2eha7qmyw63xtr6wz2pjpujdkp4r" alt="" />
       {/* <Carousel >
-        <img src="/s1.webp" alt="..." />
+        <img src="https://assets.codi.com/production/tr:w-600,h-400/cf3bqw3a587nrqwf4e954et4s4g5" alt="..." />
         <img src="https://assets.codi.com/production/tr:w-600,h-400/2eha7qmyw63xtr6wz2pjpujdkp4r" alt="..." />
         <img src="https://flowbite.com/docs/images/carousel/carousel-3.svg" alt="..." />
         <img src="https://flowbite.com/docs/images/carousel/carousel-4.svg" alt="..." />
         <img src="https://flowbite.com/docs/images/carousel/carousel-5.svg" alt="..." />
       </Carousel> */}
     </div>
-    <div className="flex flex-col content-between items-start">
+    </div>
+    <div className="flex flex-col justify-around ">
       <div>
       <p className="text-gray-500 text-sm">Williamsberg, Brooklyn, NY</p>
       <h3 className="text-gray-700">Modern, Sunny Office in Williamsburg</h3>
       </div>
-      <div>
+      <div className="flex">
         <p>2,107 ft</p>
+        <li className="ml-4">4 meeting rooms</li>
+        <p className="ml-4 font-semibold underline hover:text-gray-600">₹19,300/mo</p>
       </div>
     </div>
     </div>
