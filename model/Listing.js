@@ -6,6 +6,10 @@ const ListingSchema = new Schema({
         type: String,
         required: true,
     },
+    slug: {
+        type: String,
+        required: true
+    },
     location: {
         type: String,
         required: true,
@@ -20,7 +24,7 @@ const ListingSchema = new Schema({
     },
     price: {
         type: Number,
-        required: true
+        required: true,
     }
 });
 
