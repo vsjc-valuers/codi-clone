@@ -3,10 +3,13 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import SinglePropertyPage from "../../components/SinglePropertyPage";
+import mongoose from "mongoose";
+import Listing from "../../model/Listing";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Home({ listings }) {
   return (
     <>
       <Head>
@@ -16,11 +19,30 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='md:mx-auto md:max-w-7xl p-6 lg:px-8'>
-        <div>
-        <SinglePropertyPage />
+        <div className="space-y-3">
+          {listings && listings?.map((listing, index) => (
+            <div className="my-2" key={listing._id}>
+            <Link href={`/${listing.slug}`}>
+            <SinglePropertyPage title={listing.title} price={listing.price} location={listing.location} room={listing.room} area={listing.area} />
+            </Link>
+            </div>
+          ))}
+        
+        {/* <SinglePropertyPage /> */}
         </div>
         
       </main>
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  if (!mongoose.connections[0].readyState) {
+    await mongoose.connect(process.env.MONGO_URI);
+  }
+  let listings = await Listing.find();
+
+  return {
+    props: { listings: JSON.parse(JSON.stringify(listings))}
+  }
 }

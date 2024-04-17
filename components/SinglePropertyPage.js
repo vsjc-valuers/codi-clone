@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Carousel } from "flowbite-react";
 // import PropertyImageCarousel from "./PropertyImageCarousel";
 
-const SinglePropertyPage = () => {
+const SinglePropertyPage = ({ title, location, price, room, area }) => {
+
   return (
     <div className="flex space-x-4 w-full md:max-w-2xl">
       <div>
@@ -19,13 +20,13 @@ const SinglePropertyPage = () => {
     </div>
     <div className="flex flex-col justify-around ">
       <div>
-      <p className="text-gray-500 text-sm">Williamsberg, Brooklyn, NY</p>
-      <h3 className="text-gray-700">Modern, Sunny Office in Williamsburg</h3>
+      <p className="text-gray-500 text-sm">{location}</p>
+      <h3 className="text-gray-700">{title}</h3>
       </div>
       <div className="flex">
-        <p>2,107 ft</p>
-        <li className="ml-4">4 meeting rooms</li>
-        <p className="ml-4 font-semibold underline hover:text-gray-600">₹19,300/mo</p>
+        <p>{area} ft</p>
+        <li className="ml-4">{room} meeting rooms</li>
+        <p className="ml-4 font-semibold underline hover:text-gray-600 cursor-pointer">₹{price}/mo</p>
       </div>
     </div>
     </div>

@@ -28,5 +28,5 @@ const ListingSchema = new Schema({
     }
 });
 
-mongoose.model = {};
+mongoose.models = {};
 export default mongoose.model("Listing", ListingSchema);
